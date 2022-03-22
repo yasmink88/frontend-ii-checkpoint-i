@@ -34,7 +34,7 @@ body main {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
@@ -78,15 +78,31 @@ textarea {
     padding: 1rem;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
 .group {
     margin-top: 1rem;
 }
 
 button {
-    min-width: 200px;
-    height: 30px;
-    border-radius: 12px;
+    padding: 0.3rem 1rem;
+
+    border-radius: 15px;
     color: white;
     background-color: #5e98f0;
     margin: 0.5rem 0;
+}
+
+/* Responsive grid*/
+
+@media screen and (max-width:650px) {
+    body {
+        grid-template-areas: 
+        'header header'
+        'aside aside'
+        'main main';
+    }
+    
 }
