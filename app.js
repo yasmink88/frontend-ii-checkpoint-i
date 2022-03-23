@@ -18,6 +18,7 @@ function executar() {
     </div>`
 
     card.innerHTML = card.innerHTML + newContent
+
 }
 
 botaoEnviar.addEventListener("click", (evento) => {
